@@ -47,8 +47,8 @@ func (c *DiscordClient) FetchGuildRoles(guildID string) (map[string]string, erro
 }
 
 func (c *DiscordClient) FetchMemberRoles(guildID, userID string) ([]string, error) {
-	memberURL := fmt.Sprintf("%s/guilds/%s/members/%s", API_URL, guildID, userID)
-	req, err := http.NewRequest("GET", memberURL, nil)
+	url := fmt.Sprintf("%s/guilds/%s/members/%s", API_URL, guildID, userID)
+	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("failed to create request: %w", err)
 	}
