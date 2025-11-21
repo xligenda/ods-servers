@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/xligenda/odsapi-sso/pkg/apierrors"
+	"github.com/xligenda/ods-servers/pkg/apierrors"
 )
 
 type SQLInjectionConfig struct {
